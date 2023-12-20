@@ -1,5 +1,8 @@
-trigger:
-  - main
+resources:
+  pipelines:
+  - pipeline: sequential # Name of the pipeline resource.
+    source:  boyone.azure-pipeline-sequential # The name of the pipeline referenced by this pipeline resource.
+    trigger: true
 
 steps:
   - script: |
